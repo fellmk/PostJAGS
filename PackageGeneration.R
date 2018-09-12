@@ -16,14 +16,18 @@ library(roxygen2)
 # Create the package directory
 create("postjags")
 
+# document and build the package
 wd <- getwd()
 setwd("postjags")
 document()
+build()
 
+# get back to the main directory, install and build the package.
 setwd(wd)
 install("postjags")
 help(package="postjags")
 library(postjags)
+
 
 
 
