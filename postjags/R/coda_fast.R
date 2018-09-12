@@ -4,15 +4,15 @@
 #   Added an option for an arbitrary function
 #   Added more informative error messages
 ###############################################################################
-#' A function to find initial values for a JAGS or OpenBUGS model.
+#' A function to summarize output from a JAGS or OpenBUGS model.
 #'
-#' @param chains - The number of chains
-#' @param thin - The thinning interval. Defaults to 1 (no thinning).
-#' @param coda - A coda object form a model run.
-#' @param FUN - An optional function to run on the coda object. 
-#' @param colname - A name or list of names for the output of the optional 
+#' @param chains The number of chains
+#' @param thin The thinning interval. Defaults to 1 (no thinning).
+#' @param coda A coda object form a model run.
+#' @param FUN An optional function to run on the coda object. 
+#' @param colname A name or list of names for the output of the optional 
 #' function.
-#' @param ... - Optional parameters to FUN.
+#' @param ... Optional parameters to FUN.
 #' 
 #' Output:
 #' The output from this function is a list containing two elements. The first
@@ -20,6 +20,7 @@
 #' when using removevars to remove variables that don't need initial values
 #' in JAGS. The second element contains a list of initial values (this is a 
 #' list of lists).
+#' coda.fast()
 
 coda.fast <- function(chains, thin=1, coda=NULL, FUN=NULL, colname = "optfun", ...){
   

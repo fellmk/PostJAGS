@@ -7,9 +7,10 @@
 
 #' A function to remove burnin
 #'
-#' @param mcmcdata - An mcmc object.
-#' @param start - The iteration to start on.
-#' @param end - The iteration to stop at defaults to the final iteration.
+#' @param mcmcdata An mcmc object.
+#' @param start The iteration to start on.
+#' @param end The iteration to stop at defaults to the final iteration.
+#' mcmc.subset()
 
 mcmc.subset <- function(mcmcdata, start=1, end=0) {
 test <- list()

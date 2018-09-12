@@ -17,5 +17,14 @@ library(roxygen2)
 create("postjags")
 
 wd <- getwd()
-setwd("postjags/R")
+setwd("postjags")
 document()
+
+setwd(wd)
+install("postjags")
+help(package="postjags")
+library(postjags)
+
+
+
+

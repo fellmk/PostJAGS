@@ -44,9 +44,9 @@
 
 #' A function to find initial values for a JAGS or OpenBUGS model.
 #'
-#' @param mcmcin - an mcmc object or list.
-#' @param iteration - the iteration to pull values from, defaults to the final iteration.
-#' @param OpenBUGS - Are the initials for OpenBUGS? Defaults to FALSE.
+#' @param mcmcin an mcmc object or list.
+#' @param iteration the iteration to pull values from, defaults to the final iteration.
+#' @param OpenBUGS Are the initials for OpenBUGS? Defaults to FALSE.
 #' 
 #' Output:
 #' The output from this function is a list containing two elements. The first
@@ -54,6 +54,7 @@
 #' when using removevars to remove variables that don't need initial values
 #' in JAGS. The second element contains a list of initial values (this is a 
 #' list of lists).
+#' initfind()
 
 initfind <- function(mcmcin, iteration=0, OpenBUGS=FALSE){
 	# If mcmc.list convert to mcmc
@@ -161,9 +162,10 @@ initfind <- function(mcmcin, iteration=0, OpenBUGS=FALSE){
 
 #' A function to remove variables that don't need initial values in JAGS.
 #'
-#' @param initsin - The initial values from the initsfind function.
-#' @param variables - The indexes of variables to be removed. Variables with 
+#' @param initsin The initial values from the initsfind function.
+#' @param variables The indexes of variables to be removed. Variables with 
 #' indexes are available in the first list element from initsfind.
+#' removevars()
 
 removevars <- function(initsin, variables){
   n.chains <- length(initsin[[2]])

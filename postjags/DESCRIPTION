@@ -1,9 +1,10 @@
 Package: postjags
 Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Version: 0.1.0.0
+Authors@R: person("Michael", "Fell", email = "fellmk@gmail.com", role = c("aut", "cre"))
+Description: Helps with running and summarizing JAGS output.
 Depends: R (>= 3.4.4)
-License: What license is it under?
+License: What license is it under GPLv3
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.0.9000
