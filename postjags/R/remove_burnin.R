@@ -11,6 +11,7 @@
 #' @param start The iteration to start on.
 #' @param end The iteration to stop at defaults to the final iteration.
 #' mcmc.subset()
+#' @export
 
 mcmc.subset <- function(mcmcdata, start=1, end=0) {
 test <- list()

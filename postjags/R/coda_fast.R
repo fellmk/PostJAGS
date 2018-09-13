@@ -21,6 +21,9 @@
 #' in JAGS. The second element contains a list of initial values (this is a 
 #' list of lists).
 #' coda.fast()
+#' @keywords coda
+#' @export
+
 
 coda.fast <- function(chains, thin=1, coda=NULL, FUN=NULL, colname = "optfun", ...){
   

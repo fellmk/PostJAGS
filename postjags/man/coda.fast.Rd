@@ -32,3 +32,4 @@ coda.fast()}
 \description{
 A function to summarize output from a JAGS or OpenBUGS model.
 }
+\keyword{coda}

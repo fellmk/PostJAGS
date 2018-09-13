@@ -55,6 +55,7 @@
 #' in JAGS. The second element contains a list of initial values (this is a 
 #' list of lists).
 #' initfind()
+#' @export
 
 initfind <- function(mcmcin, iteration=0, OpenBUGS=FALSE){
 	# If mcmc.list convert to mcmc
@@ -166,6 +167,7 @@ initfind <- function(mcmcin, iteration=0, OpenBUGS=FALSE){
 #' @param variables The indexes of variables to be removed. Variables with 
 #' indexes are available in the first list element from initsfind.
 #' removevars()
+#' @export
 
 removevars <- function(initsin, variables){
   n.chains <- length(initsin[[2]])
