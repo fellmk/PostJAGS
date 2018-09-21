@@ -3,7 +3,7 @@ Title: What the Package Does (one line, title case)
 Version: 0.1.0.0
 Authors@R: person("Michael", "Fell", email = "fellmk@gmail.com", role = c("aut", "cre"))
 Description: Helps with running and summarizing JAGS output.
-Depends: R (>= 3.4.4)
+Depends: R (>= 3.4.0)
 License: What license is it under GPLv3
 Encoding: UTF-8
 LazyData: true
