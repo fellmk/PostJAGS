@@ -19,15 +19,7 @@ coda.fast(chains, thin = 1, coda = NULL, FUN = NULL,
 \item{colname}{A name or list of names for the output of the optional 
 function.}
 
-\item{...}{Optional parameters to FUN.
-
-Output:
-The output from this function is a list containing two elements. The first
-contains the names of the variables and their indices. These are useful 
-when using removevars to remove variables that don't need initial values
-in JAGS. The second element contains a list of initial values (this is a 
-list of lists).
-coda.fast()}
+\item{...}{Optional parameters to FUN.}
 }
 \description{
 A function to summarize output from a JAGS or OpenBUGS model.

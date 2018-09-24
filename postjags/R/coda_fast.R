@@ -13,14 +13,6 @@
 #' @param colname A name or list of names for the output of the optional 
 #' function.
 #' @param ... Optional parameters to FUN.
-#' 
-#' Output:
-#' The output from this function is a list containing two elements. The first
-#' contains the names of the variables and their indices. These are useful 
-#' when using removevars to remove variables that don't need initial values
-#' in JAGS. The second element contains a list of initial values (this is a 
-#' list of lists).
-#' coda.fast()
 #' @keywords coda
 #' @export
 
