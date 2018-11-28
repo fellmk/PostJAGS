@@ -7,24 +7,25 @@
 
 #' A function to remove burnin
 #'
-#' @param mcmcdata An mcmc object.
+#' @param coda An mcmc object.
 #' @param start The iteration to start on.
 #' @param end The iteration to stop at defaults to the final iteration.
 #' mcmc.subset()
 #' @export
 
-mcmc.subset <- function(mcmcdata, start=1, end=0) {
+mcmc.subset <- function(coda, start=1, end=0) {
+mcmcdata <- coda # TODO change all mcmcdata to coda in the future MKF 11/27/18
 test <- list()
 
 require(coda)
 require(mcmc)
 
 if(exists("mcmcdata")==FALSE){
-	stop("mcmcdata must be defined and contain an mcmc.list")
+	stop("coda must be defined and contain an mcmc.list")
 }
 
 if(!is.mcmc.list(mcmcdata)){
-	stop("mcmcdata must be an mcmclist see package coda")
+	stop("coda must be an mcmclist see package coda")
 }
 
 codal <- length(mcmcdata[[1]][,1])

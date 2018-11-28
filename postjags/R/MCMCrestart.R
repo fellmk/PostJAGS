@@ -44,7 +44,7 @@
 
 #' A function to find initial values for a JAGS or OpenBUGS model.
 #'
-#' @param mcmcin an mcmc object or list.
+#' @param coda an mcmc object or list.
 #' @param iteration the iteration to pull values from, defaults to the final iteration.
 #' @param OpenBUGS Are the initials for OpenBUGS? Defaults to FALSE.
 #' 
@@ -57,7 +57,8 @@
 #' initfind()
 #' @export
 
-initfind <- function(mcmcin, iteration=0, OpenBUGS=FALSE){
+initfind <- function(coda, iteration=0, OpenBUGS=FALSE){
+  mcmcin <- coda # TODO change all mcmcin to coda in the future MKF 11/27/18
 	# If mcmc.list convert to mcmc
 	if(is.mcmc.list(mcmcin)==TRUE){
 		mcmcin <- mcmc(data=mcmcin, thin=1)

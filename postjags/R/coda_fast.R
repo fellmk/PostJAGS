@@ -17,13 +17,16 @@
 #' @export
 
 
-coda.fast <- function(chains, thin=1, coda=NULL, FUN=NULL, colname = "optfun", ...){
+coda.fast <- function(coda=NULL, thin=1, FUN=NULL, colname = "optfun", ...){
   
     if(is.null(coda)){
         message("No coda object provided. Summarizing nothing is too philosophical")
         message("a task for this function.")
         stop()
     }
+  
+    # Get the number of chains
+    chains <- length(mcmcin)
   
     codal <- length(coda[[1]][,1])
 
