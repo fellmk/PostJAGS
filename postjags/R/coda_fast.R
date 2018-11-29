@@ -6,9 +6,8 @@
 ###############################################################################
 #' A function to summarize output from a JAGS or OpenBUGS model.
 #'
-#' @param chains The number of chains
-#' @param thin The thinning interval. Defaults to 1 (no thinning).
 #' @param coda A coda object form a model run.
+#' @param thin The thinning interval. Defaults to 1 (no thinning).
 #' @param FUN An optional function to run on the coda object. 
 #' @param colname A name or list of names for the output of the optional 
 #' function.
