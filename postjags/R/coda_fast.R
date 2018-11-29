@@ -25,7 +25,7 @@ coda.fast <- function(coda=NULL, thin=1, FUN=NULL, colname = "optfun", ...){
     }
   
     # Get the number of chains
-    chains <- length(mcmcin)
+    chains <- length(coda)
   
     codal <- length(coda[[1]][,1])
 
