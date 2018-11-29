@@ -4,10 +4,10 @@
 \alias{initfind}
 \title{A function to find initial values for a JAGS or OpenBUGS model.}
 \usage{
-initfind(mcmcin, iteration = 0, OpenBUGS = FALSE)
+initfind(coda, iteration = 0, OpenBUGS = FALSE)
 }
 \arguments{
-\item{mcmcin}{an mcmc object or list.}
+\item{coda}{an mcmc object or list.}
 
 \item{iteration}{the iteration to pull values from, defaults to the final iteration.}
 

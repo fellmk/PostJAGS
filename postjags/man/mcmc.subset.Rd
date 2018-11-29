@@ -4,10 +4,10 @@
 \alias{mcmc.subset}
 \title{A function to remove burnin}
 \usage{
-mcmc.subset(mcmcdata, start = 1, end = 0)
+mcmc.subset(coda, start = 1, end = 0)
 }
 \arguments{
-\item{mcmcdata}{An mcmc object.}
+\item{coda}{An mcmc object.}
 
 \item{start}{The iteration to start on.}
 

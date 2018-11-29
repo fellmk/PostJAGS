@@ -4,15 +4,13 @@
 \alias{coda.fast}
 \title{A function to summarize output from a JAGS or OpenBUGS model.}
 \usage{
-coda.fast(chains, thin = 1, coda = NULL, FUN = NULL,
-  colname = "optfun", ...)
+coda.fast(coda = NULL, thin = 1, FUN = NULL, colname = "optfun",
+  ...)
 }
 \arguments{
-\item{chains}{The number of chains}
+\item{coda}{A coda object form a model run.}
 
 \item{thin}{The thinning interval. Defaults to 1 (no thinning).}
-
-\item{coda}{A coda object form a model run.}
 
 \item{FUN}{An optional function to run on the coda object.}
 
