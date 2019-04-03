@@ -7,3 +7,6 @@ install.packages("devtools")\
 library(devtools)\
 devtools::install_github("fellmk/PostJAGS/postjags")\
 library(postjags)
+
+# Example
+See the example in the PostJAGSExample folder for a demonstration of using the restart function. The example is in "example.R" which runs a basic light response curve.
