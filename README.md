@@ -10,7 +10,7 @@ devtools::install_github("fellmk/PostJAGS/postjags")\
 library(postjags)
 
 ## Example
-See the example in the PostJAGSExample folder for a demonstration of using the restart function. The example is in "example.R" which fits a basic light response curve. An understanding of JAGS is assumed. Lines 96-102 use PostJAGS to get new initial values. Using a coda object obtained from a past JAGS model run PostJAGS will find the final values in each chain:
+See the example in the PostJAGSExample folder for a demonstration of using the restart function. The example is in "example.R" which fits a basic light response curve. Make sure to set the directory the example is in as the current working directory in R or to copy the files to your current working directory. An understanding of JAGS is assumed. Lines 96-102 use PostJAGS to get new initial values. Using a coda object obtained from a past JAGS model run PostJAGS will find the final values in each chain:
 
 ```{r}
 newinits <- initfind(coda = codalight, iteration = 0)	#output is a list
