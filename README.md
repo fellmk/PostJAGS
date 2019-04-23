@@ -33,3 +33,7 @@ After new initals are obtained they can be provide to the JAGS model just like a
 lightmodel <- jags.model(file = "modelESA.R", data = datause, inits = newinits, n.chains = n.chains, 
                          n.adapt = n.adapt)
 ```
+## Citation for PostJAGS  
+Fell, Michael (2019). PostJAGS. Retrieeved from: https://github.com/fellmk/PostJAGS 10.5281/zenodo.2648914  
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2648914.svg)](https://doi.org/10.5281/zenodo.2648914)
