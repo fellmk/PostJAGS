@@ -1,8 +1,8 @@
 # PostJAGS
-A few useful functions for working with JAGS output.
+A few useful functions for working with JAGS output. The primary functionality of PostJAGS is to restart JAGS models with initial values based on previous coda output.
 
 ## Installation 
-To install the package in your R code use:
+To install the package add the following code to your R script:
 
 install.packages("devtools")\
 library(devtools)\
