@@ -27,7 +27,7 @@ newinits <- removevars(initsin = newinits, variables=c(2))
 newinits <- newinits[[2]]
 ```
 
-After new initals are obtained they can be provide to the JAGS model just like any other initial values.
+After new initials are obtained they can be provide to the JAGS model just like any other initial values.
 ```{r}
 # Run the model with new initials
 lightmodel <- jags.model(file = "modelESA.R", data = datause, inits = newinits, n.chains = n.chains, 
