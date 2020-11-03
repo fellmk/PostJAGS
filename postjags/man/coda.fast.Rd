@@ -4,8 +4,7 @@
 \alias{coda.fast}
 \title{A function to summarize output from a JAGS or OpenBUGS model.}
 \usage{
-coda.fast(coda = NULL, thin = 1, FUN = NULL, colname = "optfun",
-  ...)
+coda.fast(coda = NULL, thin = 1, FUN = NULL, colname = "optfun", ...)
 }
 \arguments{
 \item{coda}{A coda object form a model run.}
