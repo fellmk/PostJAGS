@@ -9,12 +9,12 @@
 #
 ###############################################################################
 install.packages("devtools")
-library(devtools)
 devtools::install_github("klutometis/roxygen")
-library(roxygen2)
 
+library(roxygen2)
+library(devtools)
 # Create the package directory
-create("postjags")
+# create("postjags")
 
 # document and build the package
 wd <- getwd()

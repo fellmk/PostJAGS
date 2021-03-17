@@ -1,9 +1,9 @@
 Package: postjags
 Title: What the Package Does (one line, title case)
-Version: 1.0.0.0
+Version: 1.0.0.1
 Authors@R: person("Michael", "Fell", email = "fellmk@gmail.com", role = c("aut", "cre"))
 Description: Helps with running and summarizing JAGS output.
-Depends: R (>= 3.4.0), coda, mcmc
+Depends: R (>= 3.4.0), coda
 License: What license is it under GPLv3
 Encoding: UTF-8
 LazyData: true
