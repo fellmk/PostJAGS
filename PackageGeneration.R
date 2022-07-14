@@ -8,8 +8,9 @@
 # dissertation.
 #
 ###############################################################################
-install.packages("devtools")
-devtools::install_github("klutometis/roxygen")
+# install.packages("devtools")
+# install.packages("roxygen")
+# devtools::install_github("klutometis/roxygen")
 
 library(roxygen2)
 library(devtools)

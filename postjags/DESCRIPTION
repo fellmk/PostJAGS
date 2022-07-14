@@ -1,11 +1,11 @@
 Package: postjags
-Title: What the Package Does (one line, title case)
+Title: Work With JAGS Output
 Version: 1.0.0.1
-Authors@R: person("Michael", "Fell", email = "fellmk@gmail.com", role = c("aut", "cre"))
+Authors@R: person("Michael", "Fell", email = "michael.fell@nau.edu", role = c("aut", "cre"))
 Description: Helps with running and summarizing JAGS output.
 Depends: R (>= 3.4.0), coda
 License: What license is it under GPLv3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.0
 Imports: coda, mcmc
