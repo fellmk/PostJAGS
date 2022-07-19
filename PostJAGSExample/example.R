@@ -91,7 +91,7 @@ testsum <- coda.fast(chains=3, coda=codanew)
 test <- gelman.diag(x=codanew)
 
 ###############################################################################
-# Get new inits for the modle based on model output with PostJAGS
+# Get new inits for the model based on model output with PostJAGS
 ###############################################################################
 newinits <- initfind(coda = codalight, iteration = 0)	#output is a list
 newinits[[1]] # names of variables
