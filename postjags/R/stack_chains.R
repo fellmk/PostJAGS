@@ -5,6 +5,13 @@
 # email: michael.fell@nau.edu
 #
 ###############################################################################
+#' A function to stack chains in two coda objects. The objects must have the 
+#' same number of chains each with the same number of columns.  The parameters 
+#' in each chain must also match.
+#'
+#' @param coda1 A coda object form a model run.
+#' @param coda2 A coda object form a second model run.
+#' @export
 
 stack_chains <- function(coda1, coda2){
   
