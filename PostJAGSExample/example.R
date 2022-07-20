@@ -119,7 +119,7 @@ runtime <- system.time(
 # Stack the chains from two coda objects. There will be the same number of 
 # chains but they will have length equal to the sum of the iterations of the 
 # coda objects. 
-test <- stack_coda(codalightsave, codalight)
+test <- stack_chains(codalightsave, codalight)
 str(test)
 
 # concatenate two coda objects. The chains will be the same length but the 

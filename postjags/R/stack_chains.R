@@ -25,7 +25,7 @@ stack_chains <- function(coda1, coda2){
   # Check there are the same number of chains in each coda object.
   if(length(coda1) == length(coda2)){
     # Check that each chain has the same number of columns/variables
-    if(ncol(coda1[[1]]) == ncol(mcmcin[[1]])){
+    if(ncol(coda1[[1]]) == ncol(coda2[[1]])){
       # Check that the names in each chain are the same.
       namesIdentical = identical(colnames(coda1[[1]]), colnames(coda2[[1]]))
       if(namesIdentical){
