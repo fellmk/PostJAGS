@@ -13,7 +13,7 @@
 #' @param coda2 A coda object form a second model run.
 #' @export
 
-stack_chains <- function(coda1, coda2){
+stackchains <- function(coda1, coda2){
   
   if(is.mcmc.list(coda1)){
     coda1 <- mcmc(data=coda1, thin=1)
