@@ -1,3 +1,11 @@
+###############################################################################
+# A simple function to stack chains in coda objects.
+#
+# Written on July 20, 2022 by Michael K. Fell. 
+# email: michael.fell@nau.edu
+#
+###############################################################################
+
 stack_chains <- function(coda1, coda2){
   
   if(is.mcmc.list(coda1)){

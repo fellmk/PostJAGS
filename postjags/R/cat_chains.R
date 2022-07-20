@@ -1,11 +1,9 @@
 ###############################################################################
-# A simple function to remove the burn in or subset an mcmc.list.
+# A simple function to concatenate chains from different coda objects into a 
+# single coda object with multiple chains.
 #
 # Written on July 15, 2022 by Michael K. Fell. 
 # email: michael.fell@nau.edu
-#
-# TODO: Add dimension checks to the function to make sure the variables
-#       and lengths are the same. Provide an error if they are not.
 #
 ###############################################################################
 
