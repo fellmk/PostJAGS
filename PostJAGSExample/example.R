@@ -34,7 +34,6 @@ if("postjags" %in% installed.packages()[,1] == FALSE){
 	library(postjags)
 }
 
-
 # load in data
 datain <- read.csv("Light_Data.csv", header = T)
 datause <- list(N = 210, Aobs = datain$Aobs, PAR = datain$PAR)
@@ -114,6 +113,19 @@ runtime <- system.time(
   }
 )
 
+###############################################################################
+# Stack chains in coda objects or combine chains with PostJAGS
+###############################################################################
+# Stack the chains from two coda objects. There will be the same number of 
+# chains but they will have length equal to the sum of the iterations of the 
+# coda objects. 
+test <- stack_coda(codalightsave, codalight)
+str(test)
 
+# concatenate two coda objects. The chains will be the same length but the 
+# resulting coda object will a number of chains equal to the sum of the number 
+# of chains in the two coda objects. 
+test <- cat.chains(codalightsave, codalight)
+str(test)
 
 

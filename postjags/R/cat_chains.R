@@ -16,32 +16,16 @@ cat.chains <- function(coda1, coda2){
     coda2 <- mcmc(data=coda2, thin=1)
   }
   
-  mcmcout <- append(coda1, coda2)
-  mcmcout <- as.mcmc.list(mcmcout)
-  return(mcmcout)
+  # Check that the chains are the same length before appending.
+  if(ncol(coda1[[1]]) == ncol(coda2[[1]])){
+    if(nrow(coda1[[1]]) == nrow(coda2[[1]])){
+      mcmcout <- append(coda1, coda2)
+      mcmcout <- as.mcmc.list(mcmcout)
+      return(mcmcout)
+    }else{
+      stop("The number of rows in chains within coda objects must match.")
+    }
+  }else{
+    stop("The number of columns in chains within coda objects must match.")
+  }
 }
-
-## Test Code
-# codalight
-# codalightsave
-# 
-# coda1 <- mcmc(data=codalight, thin=1)
-# coda2 <- mcmc(data=codalightsave, thin=1)
-# 
-# test <- stack_coda(coda1, coda2)
-# test2 <- cat.chains(coda1, coda2)
-# test3 <- stack_coda(test, test2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
