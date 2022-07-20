@@ -10,63 +10,40 @@
 ###############################################################################
 
 cat.chains <- function(coda1, coda2){
-  
-  mcmcin1 <- coda1 # TODO change all mcmcin to coda in the future MKF 11/27/18
-  mcmcin2 <- coda2
   # If mcmc.list convert to mcmc
-  if(is.mcmc.list(mcmcin1)==TRUE){
-    mcmcin1 <- mcmc(data=mcmcin1, thin=1)
+  if(is.mcmc.list(coda1)){
+    coda1 <- mcmc(data=coda1, thin=1)
   }
-  if(is.mcmc.list(mcmcin2)==TRUE){
-    mcmcin2 <- mcmc(data=mcmcin2, thin=1)
+  if(is.mcmc.list(coda2)){
+    coda2 <- mcmc(data=coda2, thin=1)
   }
   
-  mcmcout <- append(mcmcin1, mcmcin2)
+  mcmcout <- append(coda1, coda2)
+  mcmcout <- as.mcmc.list(mcmcout)
   return(mcmcout)
 }
-
-
-
-
-
-stack_coda <- function(coda1, coda2){
-  
-  if(is.mcmc.list(mcmcin1)==TRUE){
-    mcmcin1 <- mcmc(data=mcmcin1, thin=1)
-  }
-  if(is.mcmc.list(mcmcin2)==TRUE){
-    mcmcin2 <- mcmc(data=mcmcin2, thin=1)
-  }
-  
-  if(length(mcmcin1) == length(mcmcin2)){
-    if(ncol(mcmcin1[[1]]) == ncol(mcmcin[[1]])){
-      # TODO check columns are equal and then make sure the names of the columns
-      # are the same in each mcmc object. 
-      
-      # TODO use mcmcout as the output object
-      
-    }else{
-      stop("All chains must have the same dimention, rows and columns.") 
-    }
-  }else{
-    stop("All coda objects must have the same number of chains.")
-  }
-  
-  return(mcmcout)
-  
-}
-
-
-
-
 
 ## Test Code
-codalight
-codalightsave
+# codalight
+# codalightsave
+# 
+# coda1 <- mcmc(data=codalight, thin=1)
+# coda2 <- mcmc(data=codalightsave, thin=1)
+# 
+# test <- stack_coda(coda1, coda2)
+# test2 <- cat.chains(coda1, coda2)
+# test3 <- stack_coda(test, test2)
 
-mcmcin1 <- mcmc(data=codalight, thin=1)
-mcmcin2 <- mcmc(data=codalightsave, thin=1)
 
 
-dim(codalight[[1]])
+
+
+
+
+
+
+
+
+
+
 
