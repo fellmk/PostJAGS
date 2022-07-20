@@ -68,6 +68,7 @@ runtime <- system.time(
                        n.iter=n.iters, thin=n.thin)
 }
 )
+codalightsave <- codalight
 
 # Summarize Results
 codanew <- list()
@@ -103,6 +104,7 @@ newinits <- newinits[[2]]
 
 # Run the model with new initials
 lightmodel <- jags.model(file = "modelESA.R", data = datause, inits = newinits, n.chains = n.chains, n.adapt = n.adapt)
+# lightmodel <- jags.model(file = "modelESA.R", data = datause, inits = newinits[[1]], n.chains = 1, n.adapt = n.adapt)
 
 runtime <- system.time(
   {
