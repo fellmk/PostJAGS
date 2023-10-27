@@ -7,6 +7,7 @@
 # Based on code written at various times while working on projects for my 
 # dissertation.
 #
+# devtools::install_github("fellmk/PostJAGS/postjags", ref = "dev", force = TRUE)
 ###############################################################################
 # install.packages("devtools")
 # install.packages("roxygen")
